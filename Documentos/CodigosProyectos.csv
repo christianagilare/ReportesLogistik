@@ -1,0 +1,32 @@
+﻿Codigo Proyecto;Proyecto;Nombre Azure;Nombre Tracking;Fecha Registro;Descripción corta;Area Beneficiada;ECU;COL;USA;NL
+LAG-001-CL360;AC Cliente 360;AC Cliente 360;AC Cliente 360;10/5/2023;Cambios en la plataforma para los clientes. ;Clientes, Empresa;25%;25%;25%;25%
+LAG-002-MIAMI;AC Scanner - Miami;AC Scanner - Miami;AC Scanner - Miami;10/5/2023;Mejoras a los procesos operativos y financieros de Miami. ;Sucursal de Miami;;;100%;
+LAG-002-MIAMI;AC Sorting Machine;AC Sorting Machine;AC Sorting Machine;;;;;;100%;
+LAG-002-MIAMI;AC Miami;AC Miami;AC Miami;;;;;;100%;
+LAG-003-ORIGEN;AC Origin - Operaciones;AC Origin - Operaciones;AC Origin - Operaciones;10/5/2023;Mejoras a los procesos opertaivos de origen, primero quick wings, despues implementación del escaner. ;Operaciones origen (Ecuador y Colombia);80%;20%;;
+LAG-004-PRO360;AC Origin - Proveedores;AC Origin - Proveedores;AC Origin - Proveedores;10/5/2023;Mejoras al modulod e proveedores, nuevas integraciones, nuevos reportes, funcionalidades. ;Proveedores, Servicio al cliente, operaciones, empresa;40%;40%;10%;10%
+LAG-005-CC;Controles de Cambios y Errores;Control de Cambios y Errores;Controles de Cambio y Errores;10/5/2023;Cambios pequeños a dierentes modulos del sistema. ;Todos;25%;25%;25%;25%
+LAG-006-FINANZ;Mejoras Financieras;Mejoras Financieras;Mejoras Financieras;10/5/2023;Mejoras a SAP, implementaciones de nuevos modulos, automatizaciones de los diferentes procesos manuales. ;Areas financieras de Ecuador y Colombia;50%;50%;;
+LAG-007-OMNICAN;Omnicanalidad;Omnicanalidad;Omnicanalidad;10/5/2023;Implementacion de la herramienta de omnicanalidad para las comunicaciones con los actores externos. Fase 1: exportadores EC, Fase 2-N: Exportadores de otras sucursales, clientes. ;"Fase1: Proveedores, Servicio al cliente, empresa; Fase 2: clientes, ventas";100%;;;
+LAG-008-TH;TH;TH;TH;10/5/2023;Mejoras al area de Talento Humando: fase 1: nomina, fase 2: dashboard de KPI, fase 3: portal de autoservicios para empleados. ;Talento humano, fase 3: todos los empleados;100%;;;
+LAG-009-BI;AC BI;AC BI;AC BI;10/5/2023;Generación de reportes y dashboards. ;Diferentes areas de la empresa;30%;30%;20%;20%
+LAG-010-OTROS;Administración;Administración;Administración;10/5/2023;Investigaciones, capacitaciones, SMARTY, administración;;25%;25%;25%;25%
+LAG-010-OTROS;Administración;AC Architecture;AC Architecture;10/5/2023;Investigaciones, capacitaciones, SMARTY, administración;;25%;25%;25%;25%
+LAG-010-OTROS;Administración;AC QA;AC QA;10/5/2023;Investigaciones, capacitaciones, SMARTY, administración;;25%;25%;25%;25%
+LAG-010-OTROS;Administración;Base de Conocimiento;Base de Conocimiento;10/5/2023;Investigaciones, capacitaciones, SMARTY, administración;;25%;25%;25%;25%
+LAG-017-ARQ;MODERNIZACIÓN ARQUITECTURAS;MODERNIZACIÓN ARQUITECTURAS;Alliance V2.0;3/1/2024;Modernización de la arquitectura;Todas areas;25%;25%;25%;25%
+LAG-010-OTROS;Administración;AllianceSAP;AllianceSAP;10/5/2023;Investigaciones, capacitaciones, SMARTY, administración;;25%;25%;25%;25%
+LAG-011-WMS;AC WMS;AC WMS;AC WMS;21/06/2023;Proyecto para implementar el Warehouse Management System globalmente en cualquier sucursal. ;La empresa, permite el plan de expansión;10%;;40%;50%
+LAG-012-APP;AC APP mobile;AC App Mobile;AC APP mobile;6/9/2023;Proyecto para actualizar la tecnología de la APP móvil para los clientes y para agregar nuevas funcionalidades/ cambiar el diseño. ;Clientes, servicio al cliente;50%;50%;;
+LAG-013-SEG;SEGURIDAD;AC Security;SEGURIDAD;23/09/2023;Proyecto para identificar y mitigar riesgos de seguridad en la fase de diseño e implementar controles de seguridad en el código.;Todas areas;25%;25%;25%;25%
+LAG-014-DEVOPS;DEVOPS;AC Devops;DEVOPS;23/09/2023;Proyecto para integración e implementación continua que permite implementar cambios de software de forma segura a través de la automatización de procesos de despliegue.;Todas areas;25%;25%;25%;25%
+LAG-015-INTEG;INTEGRACIONES;AC Integrations;Integraciones Clientes;6/10/2023;Integraciones con diferenets actores de la cadena de suministro. ;Todas areas;30%;30%;30%;10%
+LAG-016-CAT;CATÁLOGOS;AC Catalogos;AC Catálogos;3/1/2024;Cambios a los catalogos.;Todas areas;25%;25%;25%;25%
+LAG-017-ARQ;MODERNIZACIÓN ARQUITECTURAS;MODERNIZACIÓN ARQUITECTURAS;Modernización de la Arquitectura;3/1/2024;Modernización de la arquitectura;Todas areas;25%;25%;25%;25%
+LAG-018-BIO;BIOMÉTRICOS ;BIOMÉTRICOS ;Biométricos;3/22/2024;Actualización del Sistema de acceso biométrico;Operaciones Ecuador;100%;;;
+LAG-019-CON;CONTINGENCIA;CONTINGENCIA;CONTINGENCIA;3/22/2024;Minimizar el riesgo ante situaciones inesperadas que impidan el funcionamiento de los servidores de Alliance Logizitik.;Todas areas;32%;32%;32%;4%
+LAG-020-IA;INTELIGENCIA ARTIFICIAL;INTELIGENCIA ARTIFICIAL;Inteligencia Artificial;7/17/2024;Automatizar tareas, mejorar la toma de decisiones,  impulsa la innovación para lograr una ventaja competitiva.;Todas areas;32%;32%;32%;4%
+LAG-021-GDD;GOBIERNO DE DATOS;GOBIERNO DE DATOS;Gobierno de Datos;10/21/2024;Conjunto de políticas, procesos y tecnologías que garantizan la calidad, seguridad y accesibilidad de los datos, asegurando su integridad, consistencia y cumplimiento normativo.;Todas areas;32%;32%;32%;4%
+LAG-022-TMS;TMS;AC TMS;TMS;11/13/2024;Desarrollo de un sistema de transporte multisucursal, multimodal, multipuntodeentrega, multiproducto. ;Todas areas;25%;25%;25%;25%
+LAG-023-CRM;CRM;CRM;CRM;1/6/2025;Buscar un CRM que cumple con las necesidades de la empresa e integrar con el ERP organizacional. ;Comercial;25%;25%;25%;25%
+LAG-024-PRI;PRICING;PRICING;PRICING;2/4/2025;Definir un modelo de pricing para todos los servicios globales de la empresa e implementarlo dentro del sistema.;Comercial;25%;25%;25%;25%
