@@ -114,7 +114,10 @@ def run_azure_devops_export():
         df[col] = df[col].apply(format_date_us)
         
     # asegurar que exista la carpeta
-    output_dir = "output"
+    import datetime
+    dt = datetime.datetime.strptime(Config.TT_DATE_FROM, "%Y-%m-%d")
+    month_dir = dt.strftime("%B").upper()
+    output_dir = f"{month_dir}/ANEXOS"
     os.makedirs(output_dir, exist_ok=True)
 
     date_suffix = f"{Config.TT_DATE_FROM.replace('-', '')}_{Config.TT_DATE_TO.replace('-', '')}"

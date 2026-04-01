@@ -15,12 +15,18 @@ def parse_completed_work(val):
     except ValueError:
         return 0.0
 
+import datetime
+
 def load_data(output_dir: str, docs_dir: str):
     logger.info("Cargando datos para Fase 2...")
     date_suffix = f"{Config.TT_DATE_FROM.replace('-', '')}_{Config.TT_DATE_TO.replace('-', '')}"
     
-    azure_path = f"{output_dir}/azure_devops_unified_{date_suffix}.csv"
-    tracking_path = f"{output_dir}/trackingtime_unified_{date_suffix}.csv"
+    dt = datetime.datetime.strptime(Config.TT_DATE_FROM, "%Y-%m-%d")
+    month_dir = dt.strftime("%B").upper()
+    anexos_dir = f"{month_dir}/ANEXOS"
+    
+    azure_path = f"{anexos_dir}/azure_devops_unified_{date_suffix}.csv"
+    tracking_path = f"{anexos_dir}/trackingtime_unified_{date_suffix}.csv"
     codigos_path = f"{docs_dir}/CodigosProyectos.csv"
     equipo_path = f"{docs_dir}/Equipo.csv"
     
@@ -39,17 +45,20 @@ def load_data(output_dir: str, docs_dir: str):
     for c in str_cols:
         df_azure[c] = df_azure[c].astype(str).replace('nan', '')
         
+    # [COMENTADO TEMPORALMENTE: INTEGRACION TRACKINGTIME]
+    # Para volver a integrar TrackingTime, descomentar el siguiente bloque y eliminar el mock vacío:
     # 2. Load TrackingTime (,)
-    logger.info(f"Cargando TrackingTime desde {tracking_path}")
-    df_tracking = pd.read_csv(tracking_path, sep=",")
-    
-    # Cast tipos
-    df_tracking["Project"] = df_tracking["Project"].astype(str).replace('nan', '')
-    df_tracking["User"] = df_tracking["User"].astype(str).replace('nan', '')
-    
-    # Handle CSV using european decimal comma
-    if "Hours" in df_tracking.columns:
-        df_tracking["Hours"] = df_tracking["Hours"].astype(str).str.replace(",", ".").astype(float)
+    # logger.info(f"Cargando TrackingTime desde {tracking_path}")
+    # df_tracking = pd.read_csv(tracking_path, sep=",")
+    # 
+    # # Cast tipos
+    # df_tracking["Project"] = df_tracking["Project"].astype(str).replace('nan', '')
+    # df_tracking["User"] = df_tracking["User"].astype(str).replace('nan', '')
+    # 
+    # # Handle CSV using european decimal comma
+    # if "Hours" in df_tracking.columns:
+    #     df_tracking["Hours"] = df_tracking["Hours"].astype(str).str.replace(",", ".").astype(float)
+    df_tracking = pd.DataFrame(columns=["Project", "User", "Hours"])
         
     # 3. Load CodigosProyectos.csv (;)
     logger.info(f"Cargando CodigosProyectos desde {codigos_path}")

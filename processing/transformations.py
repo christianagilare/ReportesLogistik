@@ -182,9 +182,13 @@ def build_presentation_table(horas_az, horas_tr, total_horas_combinado):
     # Calcular % asignado a proyectos
     presentacion["% ASIGNADO A PROYECTOS"] = presentacion.apply(
         lambda row: 0 if (pd.isna(row["Total_Horas"]) or row["Total_Horas"] == 0)
-                    else row["Suma"] / row["Total_Horas"],
+                    else round(row["Suma"] / row["Total_Horas"], 2),
         axis=1
     )
     
     presentacion.drop(columns=["Total_Horas"], inplace=True)
+    
+    # Comentar / eliminar las columnas Suma y Origen del Excel final sin afectar el calculo previo
+    presentacion.drop(columns=["Suma", "Origen"], inplace=True, errors="ignore")
+    
     return presentacion

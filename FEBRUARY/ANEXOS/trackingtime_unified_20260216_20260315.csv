@@ -1,0 +1,174 @@
+Service,Client,Project,User,Task,Due Date,Estimated Hours,Billable,Hourly Rate,Archived,Start Date,End Date,Timezone,Duration,Hours,Notes
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,18/02/2026 08:00:00,18/02/2026 08:30:00,GMT-05:00,00:30:00,"0,5",Daily
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,18/02/2026 08:30:00,18/02/2026 09:00:00,GMT-5:00,00:30:00,"0,5",HUs para tomar en cuenta de CC
+ , ,AC WMS,Jairo Gonzalez, ,,,False,0,False,18/02/2026 08:30:00,18/02/2026 11:00:00,GMT-05:00,02:30:00,"2,5",Errores scanner
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,18/02/2026 09:00:00,18/02/2026 10:00:00,GMT-5:00,01:00:00,1,Prioridades de las HUs de Controles de Cambios.
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,18/02/2026 11:30:00,18/02/2026 12:00:00,GMT-5:00,00:30:00,"0,5",Revisar lentitud de escáneres de Colombia.
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,18/02/2026 14:00:00,18/02/2026 14:30:00,GMT-5:00,00:30:00,"0,5",ESTRATEGIAS
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,18/02/2026 14:30:00,18/02/2026 15:00:00,GMT-5:00,00:30:00,"0,5",SEGUIMIENTO GLOBAL
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,18/02/2026 16:00:00,18/02/2026 16:30:00,GMT-5:00,00:30:00,"0,5",Comité subida a producción
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,19/02/2026 08:00:00,19/02/2026 08:30:00,GMT-05:00,00:30:00,"0,5",Daily
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,19/02/2026 08:30:00,19/02/2026 09:00:00,GMT-5:00,00:30:00,"0,5",Revisión_Varios Urgentes/Claves
+ , ,AC WMS,Jairo Gonzalez, ,,,False,0,False,19/02/2026 08:30:00,19/02/2026 10:00:00,GMT-5:00,01:30:00,"1,5",Validación app 
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,19/02/2026 09:30:00,19/02/2026 10:00:00,GMT-5:00,00:30:00,"0,5",Refactorización de tráfico
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,19/02/2026 11:30:00,19/02/2026 12:00:00,GMT-5:00,00:30:00,"0,5",REVISIÓN SECURIZACIÓN EQUIPO INTERNO
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,19/02/2026 14:00:00,19/02/2026 14:30:00,GMT-5:00,00:30:00,"0,5",ESTRATEGIAS
+ , ,AC WMS,Jairo Gonzalez, ,,,False,0,False,19/02/2026 14:00:00,19/02/2026 15:30:00,GMT-5:00,01:30:00,"1,5",Hu tomar en cuenta CC
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,19/02/2026 15:30:00,19/02/2026 16:00:00,GMT-5:00,00:30:00,"0,5",Transicion CC
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,20/02/2026 08:00:00,20/02/2026 08:30:00,GMT-05:00,00:30:00,"0,5",Daily
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,20/02/2026 08:30:00,20/02/2026 09:00:00,GMT-5:00,00:30:00,"0,5",Revisión de la solución de tráfico.
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,20/02/2026 09:00:00,20/02/2026 10:00:00,GMT-5:00,01:00:00,1,Propuesta para quitar tablas de ubicación en piezas
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,20/02/2026 09:30:00,20/02/2026 10:00:00,GMT-5:00,00:30:00,"0,5",Revisión  Llenar campos Null Transportes AS carrier
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,20/02/2026 10:00:00,20/02/2026 10:30:00,GMT-5:00,00:30:00,"0,5",TRANCISIÓN CC
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,20/02/2026 11:00:00,20/02/2026 11:30:00,GMT-5:00,00:30:00,"0,5",Revision HUs CC  y Estimaciones
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,20/02/2026 11:00:00,20/02/2026 11:30:00,GMT-5:00,00:30:00,"0,5",Revisión de casos repetitivos Alliance Cloud
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,20/02/2026 11:30:00,20/02/2026 12:00:00,GMT-5:00,00:30:00,"0,5",Hus CC de cambios
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,20/02/2026 12:00:00,20/02/2026 12:30:00,GMT-5:00,00:30:00,"0,5",SECURIZACIÓN TI 
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,20/02/2026 13:00:00,20/02/2026 13:05:00,GMT-5:00,00:05:00,"0,08",RECORDATORIO - ACTUALIZACIÓN SCRIPTS AMBIENTE DESARROLLO
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,20/02/2026 14:00:00,20/02/2026 15:00:00,GMT-5:00,01:00:00,1,PROPUESTA DE ESTRUCTURA DEL SISTEMA
+ , ,AC WMS,Jairo Gonzalez, ,,,False,0,False,20/02/2026 15:00:00,20/02/2026 16:00:00,GMT-5:00,01:00:00,1,TALLER KATALON
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,21/02/2026 08:00:00,21/02/2026 08:30:00,GMT-05:00,00:30:00,"0,5",Daily
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,22/02/2026 08:00:00,22/02/2026 08:30:00,GMT-05:00,00:30:00,"0,5",Daily
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,23/02/2026 04:00:00,23/02/2026 04:30:00,GMT-5:00,00:30:00,"0,5",REVISIÓN CC
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,23/02/2026 08:00:00,23/02/2026 08:30:00,GMT-05:00,00:30:00,"0,5",Daily
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,23/02/2026 08:30:00,23/02/2026 09:00:00,GMT-5:00,00:30:00,"0,5",Revisión_Varios Urgentes/Claves
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,23/02/2026 09:00:00,23/02/2026 11:30:00,GMT-5:00,02:30:00,"2,5",Revision Pendientes CC
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,23/02/2026 11:30:00,23/02/2026 13:00:00,GMT-5:00,01:30:00,"1,5",Revision de flujo de trafico Destino
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,23/02/2026 12:30:00,23/02/2026 14:00:00,GMT-5:00,01:30:00,"1,5",HU tomar en cuenta CC
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,23/02/2026 14:00:00,23/02/2026 14:30:00,GMT-5:00,00:30:00,"0,5",ESTRATEGIAS
+ , ,AC Scanner - Miami,Jairo Gonzalez, ,,,False,0,False,23/02/2026 16:30:00,23/02/2026 18:30:00,GMT-05:00,02:00:00,2,Documentacion del scanner
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,24/02/2026 08:00:00,24/02/2026 08:30:00,GMT-05:00,00:30:00,"0,5",Daily
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,24/02/2026 09:00:00,24/02/2026 09:30:00,GMT-5:00,00:30:00,"0,5",Oportunidades de Mejora - Cambio de Equipo 
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,24/02/2026 09:30:00,24/02/2026 11:00:00,GMT-5:00,01:30:00,"1,5",Revision
+ , ,AC WMS,Jairo Gonzalez, ,,,False,0,False,24/02/2026 11:00:00,24/02/2026 11:30:00,GMT-5:00,00:30:00,"0,5",Revisión del Flujo de Trafico
+ , ,AC WMS,Jairo Gonzalez, ,,,False,0,False,24/02/2026 11:30:00,24/02/2026 12:00:00,GMT-5:00,00:30:00,"0,5",Reunión de depuración de datos.
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,24/02/2026 11:30:00,24/02/2026 13:00:00,GMT-5:00,01:30:00,"1,5",Reunion para definir fecha de depuración.
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,24/02/2026 14:00:00,24/02/2026 15:30:00,GMT-5:00,01:30:00,"1,5",REVISIÓN ÓRDENES LOCALES
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,24/02/2026 15:30:00,24/02/2026 16:00:00,GMT-5:00,00:30:00,"0,5",Revision Documento
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,24/02/2026 16:00:00,24/02/2026 16:30:00,GMT-5:00,00:30:00,"0,5",Comité subida a producción
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,24/02/2026 16:30:00,24/02/2026 18:00:00,GMT-5:00,01:30:00,"1,5",pendientes will
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,25/02/2026 08:00:00,25/02/2026 08:30:00,GMT-05:00,00:30:00,"0,5",Daily
+ , ,AC WMS,Jairo Gonzalez, ,,,False,0,False,25/02/2026 08:30:00,25/02/2026 09:00:00,GMT-5:00,00:30:00,"0,5",Pendientes will
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,25/02/2026 09:00:00,25/02/2026 10:00:00,GMT-5:00,01:00:00,1,Prioridades de las HUs de Controles de Cambios.
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,25/02/2026 11:00:00,25/02/2026 11:30:00,GMT-5:00,00:30:00,"0,5",Revisión HU CC 39607-39890
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,25/02/2026 12:00:00,25/02/2026 12:30:00,GMT-5:00,00:30:00,"0,5",::Reunión con TH: Seguro de Accidentes::
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,25/02/2026 12:30:00,25/02/2026 13:30:00,GMT-5:00,01:00:00,1,Recopilacion datos
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,25/02/2026 14:00:00,25/02/2026 14:30:00,GMT-5:00,00:30:00,"0,5",ESTRATEGIAS
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,25/02/2026 14:30:00,25/02/2026 18:00:00,GMT-5:00,03:30:00,"3,5",Revision
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,25/02/2026 16:30:00,25/02/2026 17:00:00,GMT-5:00,00:30:00,"0,5",REVISIÓN GENERAL
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,26/02/2026 08:00:00,26/02/2026 08:30:00,GMT-05:00,00:30:00,"0,5",Daily
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,26/02/2026 08:30:00,26/02/2026 09:00:00,GMT-5:00,00:30:00,"0,5",Revisión_Varios Urgentes/Claves
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,26/02/2026 09:00:00,26/02/2026 09:30:00,GMT-5:00,00:30:00,"0,5",REVISION BUG GUARDADO DE IP
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,26/02/2026 11:30:00,26/02/2026 12:00:00,GMT-5:00,00:30:00,"0,5",REVISIÓN SECURIZACIÓN EQUIPO INTERNO
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,26/02/2026 12:00:00,26/02/2026 12:30:00,GMT-5:00,00:30:00,"0,5",INFORME HALLAZGOS TEMPORADA
+ , ,AC WMS,Jairo Gonzalez, ,,,False,0,False,26/02/2026 12:30:00,26/02/2026 13:00:00,GMT-5:00,00:30:00,"0,5",Pruebas de notificaciones de Komet
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,26/02/2026 13:30:00,26/02/2026 14:00:00,GMT-5:00,00:30:00,"0,5",Revision Pendientes CC
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,26/02/2026 14:00:00,26/02/2026 14:30:00,GMT-5:00,00:30:00,"0,5",ESTRATEGIAS
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,26/02/2026 15:00:00,26/02/2026 15:30:00,GMT-5:00,00:30:00,"0,5",CODE REVIEW
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,26/02/2026 16:00:00,26/02/2026 18:30:00,GMT-5:00,02:30:00,"2,5",Etiquetas- Eliminar y cambiar
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,27/02/2026 08:00:00,27/02/2026 08:30:00,GMT-05:00,00:30:00,"0,5",Daily
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,27/02/2026 08:30:00,27/02/2026 14:30:00,GMT-05:00,06:00:00,6,Error Sorting Machine
+ , , ,Jairo Gonzalez, ,,,False,0,False,27/02/2026 08:30:00,27/02/2026 09:30:00,GMT-5:00,01:00:00,1,Revision HUs control de cambio
+ , , ,Jairo Gonzalez, ,,,False,0,False,27/02/2026 10:00:00,27/02/2026 14:00:00,GMT-5:00,04:00:00,4,Error de versionamiento de ambiente Fernando
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,27/02/2026 12:30:00,27/02/2026 13:00:00,GMT-5:00,00:30:00,"0,5",Revision Pendientes CC
+ , , ,Jairo Gonzalez, ,,,False,0,False,27/02/2026 15:00:00,27/02/2026 16:00:00,GMT-5:00,01:00:00,1,TALLER ARQUITECTURA EVENTOS - APLICADA A TMS
+ , , ,Jairo Gonzalez, ,,,False,0,False,27/02/2026 16:00:00,27/02/2026 16:30:00,GMT-5:00,00:30:00,"0,5",APROBAR TURNOS DE SOPORTE
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,28/02/2026 08:00:00,28/02/2026 08:30:00,GMT-05:00,00:30:00,"0,5",Daily
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,01/03/2026 08:00:00,01/03/2026 08:30:00,GMT-05:00,00:30:00,"0,5",Daily
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,02/03/2026 08:00:00,02/03/2026 08:30:00,GMT-05:00,00:30:00,"0,5",Daily
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,02/03/2026 08:00:00,02/03/2026 08:30:00,GMT-5:00,00:30:00,"0,5",Daily CC
+ , ,AC WMS,Jairo Gonzalez, ,,,False,0,False,02/03/2026 08:30:00,02/03/2026 09:00:00,GMT-5:00,00:30:00,"0,5",Revisión_Varios Urgentes/Claves
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,02/03/2026 09:00:00,02/03/2026 10:00:00,GMT-5:00,01:00:00,1,Revision Pendientes CC
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,02/03/2026 12:00:00,02/03/2026 12:30:00,GMT-5:00,00:30:00,"0,5",LOGIZTIK - REVISIÓN CORREO BDD - REGISTRO BUG POR HU
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,02/03/2026 12:00:00,02/03/2026 13:00:00,GMT-5:00,01:00:00,1,Revision de requerimientos minimos
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,02/03/2026 13:00:00,02/03/2026 13:30:00,GMT-5:00,00:30:00,"0,5",Revision casos de produccion
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,02/03/2026 13:30:00,02/03/2026 14:00:00,GMT-5:00,00:30:00,"0,5",Revision Actualizacion CC
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,02/03/2026 14:00:00,02/03/2026 14:30:00,GMT-5:00,00:30:00,"0,5",ESTRATEGIAS
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,02/03/2026 14:30:00,02/03/2026 15:00:00,GMT-5:00,00:30:00,"0,5",Coordinacion Equipo externo
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,02/03/2026 15:00:00,02/03/2026 15:30:00,GMT-5:00,00:30:00,"0,5",BUG: GLPI # 33610 - Reporte resumen de Bodega
+ , ,AC WMS,Jairo Gonzalez, ,,,False,0,False,02/03/2026 15:30:00,02/03/2026 16:00:00,GMT-5:00,00:30:00,"0,5",Revisión de Scripts multiple cambios
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,03/03/2026 08:00:00,03/03/2026 08:30:00,GMT-05:00,00:30:00,"0,5",Daily
+ , ,AC WMS,Jairo Gonzalez, ,,,False,0,False,03/03/2026 10:30:00,03/03/2026 13:00:00,GMT-5:00,02:30:00,"2,5",Revision APK Scanner
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,03/03/2026 11:00:00,03/03/2026 11:30:00,GMT-5:00,00:30:00,"0,5",Revision Sesiones
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,03/03/2026 11:30:00,03/03/2026 12:00:00,GMT-5:00,00:30:00,"0,5",Revision HUs CC a prod
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,03/03/2026 13:00:00,03/03/2026 13:30:00,GMT-5:00,00:30:00,"0,5",Revision
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,03/03/2026 15:30:00,03/03/2026 16:30:00,GMT-5:00,01:00:00,1,Revision de EDIs Contadores
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,03/03/2026 16:00:00,03/03/2026 16:30:00,GMT-5:00,00:30:00,"0,5",Comité subida a producción
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,04/03/2026 08:00:00,04/03/2026 08:30:00,GMT-05:00,00:30:00,"0,5",Daily
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,04/03/2026 08:00:00,04/03/2026 08:10:00,GMT-5:00,00:10:00,"0,17",Daily CC
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,04/03/2026 09:00:00,04/03/2026 10:00:00,GMT-5:00,01:00:00,1,Prioridades de las HUs de Controles de Cambios.
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,04/03/2026 11:00:00,04/03/2026 13:30:00,GMT-5:00,02:30:00,"2,5",Configuraciones Alliance 2.0
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,04/03/2026 14:00:00,04/03/2026 14:30:00,GMT-5:00,00:30:00,"0,5",ESTRATEGIAS
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,04/03/2026 14:30:00,04/03/2026 15:30:00,GMT-5:00,01:00:00,1,Validaciones Bodega
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,04/03/2026 15:00:00,04/03/2026 15:30:00,GMT-5:00,00:30:00,"0,5",Pruebas Tempranas: 62122 BUG: GLPI # 33367 - MIA: error etiqueta en repogramación
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,04/03/2026 15:30:00,04/03/2026 16:30:00,GMT-5:00,01:00:00,1,62134 BUG: GLPI # 33390 - Permite saltar el control de cambio de contraseña en Alliance Cloud
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,05/03/2026 08:00:00,05/03/2026 08:30:00,GMT-05:00,00:30:00,"0,5",Daily
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,05/03/2026 08:30:00,05/03/2026 09:00:00,GMT-5:00,00:30:00,"0,5",Revisión_Varios Urgentes/Claves
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,05/03/2026 09:00:00,05/03/2026 09:30:00,GMT-5:00,00:30:00,"0,5",Envio de Novedades de temporada
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,05/03/2026 11:30:00,05/03/2026 12:00:00,GMT-5:00,00:30:00,"0,5",REVISIÓN SECURIZACIÓN EQUIPO INTERNO
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,05/03/2026 13:00:00,05/03/2026 14:30:00,GMT-5:00,01:30:00,"1,5",Reunión para definir la manera de descargar documentos de datos históricos.
+ , , ,Jairo Gonzalez, ,,,False,0,False,05/03/2026 14:00:00,05/03/2026 14:30:00,GMT-5:00,00:30:00,"0,5",ESTRATEGIAS
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,05/03/2026 14:30:00,05/03/2026 16:30:00,GMT-5:00,02:00:00,2,Pruebas tempranas 62134 BUG: GLPI # 33390 - Permite saltar el control de cambio de contraseña en Alliance Cloud
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,06/03/2026 08:00:00,06/03/2026 08:30:00,GMT-05:00,00:30:00,"0,5",Daily
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,06/03/2026 08:00:00,06/03/2026 08:10:00,GMT-5:00,00:10:00,"0,17",Daily CC
+ , ,AC WMS,Jairo Gonzalez, ,,,False,0,False,06/03/2026 10:00:00,06/03/2026 12:00:00,GMT-5:00,02:00:00,2,Visita Miami: Hallazgos funcionamiento scanner
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,06/03/2026 12:00:00,06/03/2026 12:30:00,GMT-5:00,00:30:00,"0,5",Revisión de los pasos para recuperar documentos de datos depurados.
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,06/03/2026 13:00:00,06/03/2026 13:05:00,GMT-5:00,00:05:00,"0,08",RECORDATORIO - ACTUALIZACIÓN SCRIPTS AMBIENTE DESARROLLO
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,06/03/2026 14:30:00,06/03/2026 15:00:00,GMT-5:00,00:30:00,"0,5",COMUNICADO SOBRE HORAS EXTRAS FEBRERO
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,06/03/2026 15:00:00,06/03/2026 15:30:00,GMT-5:00,00:30:00,"0,5",Coordinacion Equipo externo y permiso dia lunes 9 de marzo
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,06/03/2026 15:30:00,06/03/2026 16:00:00,GMT-5:00,00:30:00,"0,5",CONVERSATORIO TECNOLOGÍA
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,06/03/2026 16:00:00,06/03/2026 17:30:00,GMT-5:00,01:30:00,"1,5",Definicion Escaner Zebra
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,06/03/2026 16:30:00,06/03/2026 17:00:00,GMT-5:00,00:30:00,"0,5",REvision de 62834 BUG: GLPI # 33568 - Diferencia en cantidad de etiquetas al ingresar por consignatario
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,07/03/2026 08:00:00,07/03/2026 08:30:00,GMT-05:00,00:30:00,"0,5",Daily
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,08/03/2026 08:00:00,08/03/2026 08:30:00,GMT-05:00,00:30:00,"0,5",Daily
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,09/03/2026 08:00:00,09/03/2026 08:30:00,GMT-05:00,00:30:00,"0,5",Daily
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,09/03/2026 08:00:00,09/03/2026 08:10:00,GMT-5:00,00:10:00,"0,17",Daily CC
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,09/03/2026 08:30:00,09/03/2026 09:00:00,GMT-5:00,00:30:00,"0,5",Revisión_Varios Urgentes/Claves
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,09/03/2026 09:00:00,09/03/2026 09:30:00,GMT-5:00,00:30:00,"0,5",SEGUIMIENTO GLOBAL
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,09/03/2026 09:00:00,09/03/2026 10:00:00,GMT-5:00,01:00:00,1,Revision Pendientes CC
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,09/03/2026 11:00:00,09/03/2026 12:00:00,GMT-5:00,01:00:00,1,Optimización de Proceso de comunicación y Gestión de Errores
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,09/03/2026 12:00:00,09/03/2026 16:30:00,GMT-5:00,04:30:00,"4,5",Revisión de casos repetitivos Alliance Cloud
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,10/03/2026 08:00:00,10/03/2026 08:30:00,GMT-05:00,00:30:00,"0,5",Daily
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,10/03/2026 08:30:00,10/03/2026 08:30:00,GMT-5:00,00:00:00,0,Reunión para decidir que hacer con los tiempos de la generación de docs.
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,10/03/2026 10:30:00,10/03/2026 11:00:00,GMT-5:00,00:30:00,"0,5",Coordinacion visita bodegas 10/03/2026
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,10/03/2026 14:00:00,10/03/2026 14:30:00,GMT-5:00,00:30:00,"0,5",Revision HU BUG: GLPI # 33588 - MIA: EDI vs Despacho Delivery no coincide - EDI.
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,10/03/2026 14:30:00,10/03/2026 15:00:00,GMT-5:00,00:30:00,"0,5",Revisión de Scripts multiple cambios
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,10/03/2026 15:00:00,10/03/2026 15:30:00,GMT-5:00,00:30:00,"0,5",Resultados Documentos
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,10/03/2026 16:00:00,10/03/2026 16:30:00,GMT-5:00,00:30:00,"0,5",Comité subida a producción
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,10/03/2026 19:00:00,10/03/2026 22:00:00,GMT-5:00,03:00:00,3,Lineamientos equipo de desarrollo
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,11/03/2026 08:00:00,11/03/2026 08:30:00,GMT-05:00,00:30:00,"0,5",Daily
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,11/03/2026 08:00:00,11/03/2026 08:10:00,GMT-5:00,00:10:00,"0,17",Daily CC
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,11/03/2026 09:00:00,11/03/2026 10:00:00,GMT-5:00,01:00:00,1,Prioridades de las HUs de Controles de Cambios.
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,11/03/2026 10:30:00,11/03/2026 11:00:00,GMT-5:00,00:30:00,"0,5",SEGUIMIENTO CONTROLES DE CAMBIO
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,11/03/2026 11:00:00,11/03/2026 12:00:00,GMT-5:00,01:00:00,1,Revisión de flujo de Trafico
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,11/03/2026 12:00:00,11/03/2026 12:30:00,GMT-5:00,00:30:00,"0,5",Revisión del proceso de obtener docs solicitados por Miami.
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,11/03/2026 14:00:00,11/03/2026 14:30:00,GMT-5:00,00:30:00,"0,5",ESTRATEGIAS
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,11/03/2026 14:30:00,11/03/2026 15:00:00,GMT-5:00,00:30:00,"0,5",Pruebas Tempranas 63403 BUG: GLPI # 33871- ERROR AL DESCARGAR ETIQUETAS DEL SISTEMA ALLIANCE CLOUD con un cliente en especifico
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,11/03/2026 15:00:00,11/03/2026 17:30:00,GMT-5:00,02:30:00,"2,5",Revision Ordenes Locales
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,11/03/2026 18:30:00,11/03/2026 20:00:00,GMT-5:00,01:30:00,"1,5",Lineamientos equipo desarrollo
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,12/03/2026 08:00:00,12/03/2026 08:30:00,GMT-05:00,00:30:00,"0,5",Daily
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,12/03/2026 08:30:00,12/03/2026 09:00:00,GMT-5:00,00:30:00,"0,5",Revisión_Varios Urgentes/Claves
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,12/03/2026 09:00:00,12/03/2026 09:30:00,GMT-5:00,00:30:00,"0,5",Publicación dashboard IPH - Fabrics
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,12/03/2026 14:00:00,12/03/2026 14:30:00,GMT-5:00,00:30:00,"0,5",ESTRATEGIAS
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,12/03/2026 14:00:00,12/03/2026 14:30:00,GMT-5:00,00:30:00,"0,5",Ventas mixtas 
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,12/03/2026 14:30:00,12/03/2026 15:00:00,GMT-5:00,00:30:00,"0,5",Procesos Analisis de logs Implementados 
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,12/03/2026 15:00:00,12/03/2026 15:30:00,GMT-5:00,00:30:00,"0,5",Generacion Datos
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,12/03/2026 15:30:00,12/03/2026 16:00:00,GMT-5:00,00:30:00,"0,5",Revisión de la conexión con FIORE.
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,12/03/2026 16:00:00,12/03/2026 19:00:00,GMT-5:00,03:00:00,3,Revision
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,12/03/2026 19:30:00,12/03/2026 22:00:00,GMT-5:00,02:30:00,"2,5",Lineamientos Equipo Desarrollo
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,13/03/2026 08:00:00,13/03/2026 08:30:00,GMT-05:00,00:30:00,"0,5",Daily
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,13/03/2026 08:00:00,13/03/2026 08:10:00,GMT-5:00,00:10:00,"0,17",Daily CC
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,13/03/2026 09:00:00,13/03/2026 09:30:00,GMT-5:00,00:30:00,"0,5",Revision de logica de query
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,13/03/2026 11:00:00,13/03/2026 13:00:00,GMT-5:00,02:00:00,2,Revisión de Trafico Destino - Origen
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,13/03/2026 14:00:00,13/03/2026 16:30:00,GMT-5:00,02:30:00,"2,5",Envios de EDIs
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,13/03/2026 14:30:00,13/03/2026 17:00:00,GMT-5:00,02:30:00,"2,5",Revisión del caso de las transmisiones del api de inventario.
+ , ,Controles de Cambio y Errores,Jairo Gonzalez, ,,,False,0,False,13/03/2026 18:00:00,13/03/2026 18:30:00,GMT-5:00,00:30:00,"0,5",Lineamientod Equipo De Desarrollo
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,14/03/2026 08:00:00,14/03/2026 08:30:00,GMT-05:00,00:30:00,"0,5",Daily
+ , ,Administración,Jairo Gonzalez, ,,,False,0,False,15/03/2026 08:00:00,15/03/2026 08:30:00,GMT-05:00,00:30:00,"0,5",Daily
+ , ,Administración,Maricela Becerra, ,,,False,0,False,16/02/2026 08:00:00,16/02/2026 08:30:00,GMT-05:00,00:30:00,"0,5", 
+ , ,Administración,Maricela Becerra, ,,,False,0,False,17/02/2026 08:00:00,17/02/2026 08:30:00,GMT-05:00,00:30:00,"0,5", 
+ , ,Administración,Maricela Becerra, ,,,False,0,False,17/02/2026 10:00:00,17/02/2026 12:00:00,GMT-05:00,02:00:00,2,Reuniones de fábrica
+ , ,Administración,Maricela Becerra, ,,,False,0,False,18/02/2026 08:00:00,18/02/2026 08:30:00,GMT-05:00,00:30:00,"0,5", 
+ , ,Administración,Maricela Becerra, ,,,False,0,False,19/02/2026 08:00:00,19/02/2026 08:30:00,GMT-05:00,00:30:00,"0,5", 
+ , ,Administración,Maricela Becerra, ,,,False,0,False,19/02/2026 10:00:00,19/02/2026 12:00:00,GMT-05:00,02:00:00,2,Reuniones de fábrica
+ , ,Administración,Maricela Becerra, ,,,False,0,False,20/02/2026 08:00:00,20/02/2026 08:30:00,GMT-05:00,00:30:00,"0,5", 
