@@ -2,8 +2,8 @@ import pandas as pd
 import io
 import logging
 from config import Config
+from report_paths import ensure_period_dirs
 from .client import TrackingTimeClient
-import os
 
 logger = logging.getLogger(__name__)
 
@@ -64,16 +64,9 @@ def run_trackingtime_export():
         logger.info(f"Concatenando {len(all_dfs)} dataframes...")
         unified_df = pd.concat(all_dfs, ignore_index=True)
 
-        import datetime
-        dt = datetime.datetime.strptime(Config.TT_DATE_FROM, "%Y-%m-%d")
-        month_dir = dt.strftime("%B").upper()
-        output_dir = f"{month_dir}/ANEXOS"
-        os.makedirs(output_dir, exist_ok=True)
+        paths = ensure_period_dirs()
+        output_path = paths["tracking_csv"]
 
-        date_suffix = f"{Config.TT_DATE_FROM.replace('-', '')}_{Config.TT_DATE_TO.replace('-', '')}"
-        output_path = f"{output_dir}/trackingtime_unified_{date_suffix}.csv"
-
-        # Guardar en disco
         unified_df.to_csv(output_path, index=False)
 
         logger.info(f"Exportacion de TrackingTime finalizada. Archivo: {output_path}")

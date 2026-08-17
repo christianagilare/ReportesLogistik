@@ -2,8 +2,8 @@ import pandas as pd
 import logging
 from typing import Any
 from config import Config
+from report_paths import ensure_period_dirs
 from .client import AzureDevOpsClient
-import os
 
 logger = logging.getLogger(__name__)
 
@@ -113,15 +113,8 @@ def run_azure_devops_export():
         df[col] = pd.to_datetime(df[col], errors='coerce')
         df[col] = df[col].apply(format_date_us)
         
-    # asegurar que exista la carpeta
-    import datetime
-    dt = datetime.datetime.strptime(Config.TT_DATE_FROM, "%Y-%m-%d")
-    month_dir = dt.strftime("%B").upper()
-    output_dir = f"{month_dir}/ANEXOS"
-    os.makedirs(output_dir, exist_ok=True)
-
-    date_suffix = f"{Config.TT_DATE_FROM.replace('-', '')}_{Config.TT_DATE_TO.replace('-', '')}"
-    output_path = f"{output_dir}/azure_devops_unified_{date_suffix}.csv"
+    paths = ensure_period_dirs()
+    output_path = paths["azure_csv"]
     df.to_csv(output_path, index=False)
 
     logger.info(f"Exportacion de Azure DevOps finalizada. Archivo: {output_path}")

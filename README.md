@@ -20,4 +20,4 @@ Todas las credenciales necesarias deben estar en el archivo `.env`. Se deben ten
 1. Asegúrate de tener las dependencias instaladas (`pip install -r requirements.txt`).
 2. Verifica que tu archivo `.env` esté debidamente configurado.
 3. Ejecuta el script principal: `python main.py`
-4. El reporte generado se guardará en la carpeta `output`.
+4. El reporte generado se guardará en `Informes/{año}/{mes}/` (por ejemplo, `Informes/2026/07-JULY/`).

@@ -13,5 +13,6 @@ env.bak/
 venv.bak/
 
 # Outputs
+Informes/
 output/
 !output/.gitkeep

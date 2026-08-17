@@ -1,7 +1,130 @@
+import math
 import pandas as pd
 import logging
 
 logger = logging.getLogger(__name__)
+
+MIN_PERCENT = 1
+TOTAL_PERCENT = 100
+
+
+def _allocate_percentages(raw_fractions: list[float]) -> list[float]:
+    """
+    Asigna porcentajes enteros (1-100) que suman exactamente 100 por persona.
+    - Valores > 0 con parte entera 0 reciben minimo 1%.
+    - El resto se distribuye por mayor resto (metodo Hamilton).
+    Retorna decimales (0.34 = 34%).
+    """
+    n = len(raw_fractions)
+    if n == 0:
+        return []
+    if n == 1:
+        return [1.0]
+
+    total_raw = sum(raw_fractions)
+    if total_raw <= 0:
+        return [0.0] * n
+
+    normalized = [f / total_raw for f in raw_fractions]
+    scaled = [f * TOTAL_PERCENT for f in normalized]
+
+    floors = [math.floor(x) for x in scaled]
+    remainders = [s - math.floor(s) for s in scaled]
+
+    for i, (raw, fl) in enumerate(zip(raw_fractions, floors)):
+        if raw > 0 and fl == 0:
+            floors[i] = MIN_PERCENT
+
+    deficit = TOTAL_PERCENT - sum(floors)
+
+    if deficit > 0:
+        order = sorted(range(n), key=lambda i: remainders[i], reverse=True)
+        for k in range(deficit):
+            floors[order[k % n]] += 1
+    elif deficit < 0:
+        order = sorted(range(n), key=lambda i: (floors[i], remainders[i]), reverse=True)
+        remaining = -deficit
+        attempts = 0
+        while remaining > 0 and attempts < n * abs(deficit) + n:
+            idx = order[attempts % n]
+            min_allowed = MIN_PERCENT if raw_fractions[idx] > 0 else 0
+            if floors[idx] > min_allowed:
+                floors[idx] -= 1
+                remaining -= 1
+            attempts += 1
+
+    return [round(f / TOTAL_PERCENT, 2) for f in floors]
+
+
+def _distribute_equal_percentages(n_projects: int, person_index: int = 0) -> list[float]:
+    """Distribuye 100% en enteros lo mas equitativamente posible entre n proyectos."""
+    if n_projects == 0:
+        return []
+    if n_projects == 1:
+        return [1.0]
+
+    base = TOTAL_PERCENT // n_projects
+    remainder = TOTAL_PERCENT % n_projects
+    pcts = [base] * n_projects
+
+    for i in range(remainder):
+        idx = (person_index + i) % n_projects
+        pcts[idx] += 1
+
+    return [round(p / TOTAL_PERCENT, 2) for p in pcts]
+
+
+def add_new_collaborators(presentacion: pd.DataFrame, collaborators: list[dict]) -> pd.DataFrame:
+    """
+    Agrega registros para colaboradores nuevos en todos los proyectos existentes.
+    No modifica registros existentes. Omite colaboradores que ya estan en la tabla.
+    """
+    if not collaborators:
+        return presentacion
+
+    projects = presentacion[["PROYECTO", "CODIGO"]].drop_duplicates().reset_index(drop=True)
+    n_projects = len(projects)
+    if n_projects == 0:
+        logger.warning("No hay proyectos en la tabla para asignar nuevos colaboradores.")
+        return presentacion
+
+    existing_names = set(presentacion["NOMBRE"].dropna().unique())
+    new_rows = []
+    added_people = 0
+
+    for person_index, collab in enumerate(collaborators):
+        nombre = collab["nombre"]
+        if nombre in existing_names:
+            logger.info("Colaborador '%s' ya existe en la tabla, se omite.", nombre)
+            continue
+
+        pcts = _distribute_equal_percentages(n_projects, person_index)
+        for i, proj in projects.iterrows():
+            new_rows.append({
+                "EMPRESA": collab["empresa"],
+                "NOMBRE": nombre,
+                "CÉDULA DE IDENTIDAD": collab["cedula"],
+                "PROYECTO": proj["PROYECTO"],
+                "CODIGO": proj["CODIGO"],
+                "% ASIGNADO A PROYECTOS": pcts[i],
+            })
+
+        existing_names.add(nombre)
+        added_people += 1
+
+    if not new_rows:
+        return presentacion
+
+    logger.info(
+        "Se agregaron %s registros para %s colaborador(es) nuevo(s).",
+        len(new_rows),
+        added_people,
+    )
+    result = pd.concat([presentacion, pd.DataFrame(new_rows)], ignore_index=True)
+    result["CÉDULA DE IDENTIDAD"] = pd.to_numeric(
+        result["CÉDULA DE IDENTIDAD"], errors="coerce"
+    ).astype("int64")
+    return result
 
 # FASE 2-A: TRANSFORMACION DEL DATA SOURCE AZURE DEVOPS
 def transform_azure_devops(df: pd.DataFrame) -> pd.DataFrame:
@@ -167,28 +290,29 @@ def build_tables(azure_df, tracking_df, codigos_df, equipo_df):
 # FASE 2-D: TABLA DE PRESENTACION (HOJA PRINCIPAL)
 def build_presentation_table(horas_az, horas_tr, total_horas_combinado):
     logger.info("Construyendo tabla de presentacion...")
-    
-    # Combinar HORAS AZURE + HORAS TRACKING
+
     presentacion = pd.concat([horas_az, horas_tr], ignore_index=True)
-    
-    # LEFT JOIN con total_horas_combinado
+
     presentacion = presentacion.merge(
         total_horas_combinado[["Usuario", "Total_Horas"]],
         left_on="NOMBRE",
         right_on="Usuario",
         how="left"
     ).drop(columns=["Usuario"])
-    
-    # Calcular % asignado a proyectos
-    presentacion["% ASIGNADO A PROYECTOS"] = presentacion.apply(
-        lambda row: 0 if (pd.isna(row["Total_Horas"]) or row["Total_Horas"] == 0)
-                    else round(row["Suma"] / row["Total_Horas"], 2),
-        axis=1
-    )
-    
+
+    # Excluir filas sin horas registradas
+    presentacion = presentacion[presentacion["Suma"] > 0].copy()
+
+    presentacion["% ASIGNADO A PROYECTOS"] = 0.0
+    for _, group in presentacion.groupby("NOMBRE", sort=False):
+        total_horas = group["Total_Horas"].iloc[0]
+        if pd.isna(total_horas) or total_horas <= 0:
+            continue
+
+        raw_fractions = (group["Suma"] / total_horas).tolist()
+        presentacion.loc[group.index, "% ASIGNADO A PROYECTOS"] = _allocate_percentages(raw_fractions)
+
     presentacion.drop(columns=["Total_Horas"], inplace=True)
-    
-    # Comentar / eliminar las columnas Suma y Origen del Excel final sin afectar el calculo previo
     presentacion.drop(columns=["Suma", "Origen"], inplace=True, errors="ignore")
-    
+
     return presentacion

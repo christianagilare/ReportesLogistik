@@ -1,10 +1,9 @@
-import logging
-import os
-# [COMENTADO TEMPORALMENTE: INTEGRACION TRACKINGTIME]
+import logging# [COMENTADO TEMPORALMENTE: INTEGRACION TRACKINGTIME]
 # Para volver a integrar TrackingTime, descomentar la siguiente linea:
 # from trackingtime.exporter import run_trackingtime_export
 from azure_devops.exporter import run_azure_devops_export
 from config import validate_config, Config
+from report_paths import ensure_period_dirs, get_report_paths
 
 from processing import (
     load_data,
@@ -12,6 +11,7 @@ from processing import (
     transform_trackingtime,
     build_tables,
     build_presentation_table,
+    add_new_collaborators,
     generate_excel_report
 )
 
@@ -51,19 +51,13 @@ def main():
     logger.info("FIN FASE 1")
     
     logger.info("INICIO FASE 2: Transformacion y Reporte")
-    
-    import datetime
-    dt = datetime.datetime.strptime(Config.TT_DATE_FROM, "%Y-%m-%d")
-    output_dir = dt.strftime("%B").upper()
-    os.makedirs(output_dir, exist_ok=True)
-    
+
+    paths = ensure_period_dirs()
     docs_dir = "Documentos"
-    
-    date_suffix = f"{Config.TT_DATE_FROM.replace('-', '')}_{Config.TT_DATE_TO.replace('-', '')}"
-    
+
     # 1. Load data
     try:
-        df_azure_raw, df_tracking_raw, df_codigos, df_equipo = load_data(output_dir, docs_dir)
+        df_azure_raw, df_tracking_raw, df_codigos, df_equipo = load_data(docs_dir)
     except Exception as e:
         logger.error(f"Error al cargar datos para Fase 2: {e}", exc_info=True)
         return
@@ -80,9 +74,13 @@ def main():
     
     # 4. Presentation matrix
     presentacion = build_presentation_table(horas_az, horas_tr, total_horas_combinado)
+
+    if Config.AUTO_ADD_COLLABORATORS:
+        logger.info("Agregando registros de nuevos colaboradores...")
+        presentacion = add_new_collaborators(presentacion, Config.NEW_COLLABORATORS)
     
     # 5. Generate Excel
-    output_path = f"{output_dir}/Reporte_{date_suffix}.xlsx"
+    output_path = str(paths["report_path"])
     generate_excel_report(
         presentacion=presentacion,
         codigos_df=df_codigos,

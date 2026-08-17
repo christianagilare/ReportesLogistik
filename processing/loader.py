@@ -1,6 +1,7 @@
 import pandas as pd
 import logging
 from config import Config
+from report_paths import get_report_paths
 
 logger = logging.getLogger(__name__)
 
@@ -15,18 +16,12 @@ def parse_completed_work(val):
     except ValueError:
         return 0.0
 
-import datetime
-
-def load_data(output_dir: str, docs_dir: str):
+def load_data(docs_dir: str):
     logger.info("Cargando datos para Fase 2...")
-    date_suffix = f"{Config.TT_DATE_FROM.replace('-', '')}_{Config.TT_DATE_TO.replace('-', '')}"
-    
-    dt = datetime.datetime.strptime(Config.TT_DATE_FROM, "%Y-%m-%d")
-    month_dir = dt.strftime("%B").upper()
-    anexos_dir = f"{month_dir}/ANEXOS"
-    
-    azure_path = f"{anexos_dir}/azure_devops_unified_{date_suffix}.csv"
-    tracking_path = f"{anexos_dir}/trackingtime_unified_{date_suffix}.csv"
+    paths = get_report_paths()
+
+    azure_path = paths["azure_csv"]
+    tracking_path = paths["tracking_csv"]
     codigos_path = f"{docs_dir}/CodigosProyectos.csv"
     equipo_path = f"{docs_dir}/Equipo.csv"
     
