@@ -51,6 +51,26 @@ class AzureDevOpsClient:
         data = response.json()
         return [item["id"] for item in data.get("workItems", [])]
 
+    def get_query_wiql(self, query_id: str) -> str:
+        url = (
+            f"{self.base_url}/{self.org}/{self.project_id}/_apis/wit/queries/{query_id}"
+            f"?$expand=wiql&api-version=7.0"
+        )
+        response = self._make_request("GET", url)
+        data = response.json()
+        wiql = data.get("wiql")
+        if not wiql or not str(wiql).strip():
+            raise AzureDevOpsAPIError(
+                "La metadata del query no incluyo texto WIQL. Verifique $expand=wiql."
+            )
+        return wiql
+
+    def execute_wiql_query(self, wiql: str) -> List[int]:
+        url = f"{self.base_url}/{self.org}/{self.project_id}/_apis/wit/wiql?api-version=7.0"
+        response = self._make_request("POST", url, json_data={"query": wiql})
+        data = response.json()
+        return [item["id"] for item in data.get("workItems", [])]
+
     def get_work_items_batch(self, ids: List[int], fields: List[str]) -> List[Dict[str, Any]]:
         url = f"{self.base_url}/{self.org}/{self.project_id}/_apis/wit/workitemsbatch?api-version=7.0"
         payload = {
