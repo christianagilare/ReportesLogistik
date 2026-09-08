@@ -57,6 +57,9 @@ class Config:
     ADO_PROJECT_ID = os.getenv("ADO_PROJECT_ID")
     ADO_QUERY_ID = os.getenv("ADO_QUERY_ID")
     ADO_BASE_URL = os.getenv("ADO_BASE_URL", "https://dev.azure.com")
+    # wiql_env (default): reescribe System.ChangedDate con TT_DATE_FROM / TT_DATE_TO.
+    # saved_query: usa las fechas embebidas en el query guardado de Azure DevOps.
+    ADO_EXPORT_MODE = (os.getenv("ADO_EXPORT_MODE") or "wiql_env").strip().lower() or "wiql_env"
 
     # ─── Nuevos colaboradores ────────────────────────────────
     AUTO_ADD_COLLABORATORS = _parse_bool(os.getenv("AUTO_ADD_COLLABORATORS"))
@@ -73,6 +76,12 @@ def validate_config():
     
     if missing:
         raise ValueError(f"Faltan las siguientes variables de entorno en el archivo .env: {', '.join(missing)}")
+
+    allowed_modes = ("wiql_env", "saved_query")
+    if Config.ADO_EXPORT_MODE not in allowed_modes:
+        raise ValueError(
+            f"ADO_EXPORT_MODE invalido: {Config.ADO_EXPORT_MODE!r}. Use uno de: {', '.join(allowed_modes)}"
+        )
 
 # Validar al cargar el módulo
 validate_config()

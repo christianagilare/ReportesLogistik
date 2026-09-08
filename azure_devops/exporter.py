@@ -4,6 +4,8 @@ from typing import Any
 from config import Config
 from report_paths import ensure_period_dirs
 from .client import AzureDevOpsClient
+from .export_ids import fetch_work_item_ids
+from .wiql import normalize_export_mode
 
 logger = logging.getLogger(__name__)
 
@@ -26,8 +28,9 @@ def format_date_us(dt) -> str:
         time_part = time_part[1:]
     return f"{dt.month}/{dt.day}/{dt.year} {time_part}"
 
-def run_azure_devops_export():
-    logger.info("Iniciando exportacion de Azure DevOps...")
+def run_azure_devops_export(mode: str | None = None):
+    resolved_mode = normalize_export_mode(mode or Config.ADO_EXPORT_MODE)
+    logger.info("Iniciando exportacion de Azure DevOps (modo=%s)...", resolved_mode)
     
     client = AzureDevOpsClient(
         token=Config.ADO_TOKEN,
@@ -37,14 +40,13 @@ def run_azure_devops_export():
     )
     
     try:
-        wiql_url = client.get_query_wiql_url(Config.ADO_QUERY_ID)
-        logger.info("WIQL URL obtenida exitosamente desde metadata.")
-    except Exception as e:
-        logger.error(f"Fallo al obtener WIQL metadata: {e}")
-        return
-        
-    try:
-        work_item_ids = client.execute_wiql(wiql_url)
+        work_item_ids = fetch_work_item_ids(
+            client,
+            mode=resolved_mode,
+            query_id=Config.ADO_QUERY_ID,
+            date_from=Config.TT_DATE_FROM,
+            date_to=Config.TT_DATE_TO,
+        )
         logger.info(f"Se encontraron {len(work_item_ids)} work items en el query.")
     except Exception as e:
         logger.error(f"Fallo al ejecutar WIQL: {e}")

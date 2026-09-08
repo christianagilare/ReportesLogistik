@@ -1,9 +1,15 @@
-import logging# [COMENTADO TEMPORALMENTE: INTEGRACION TRACKINGTIME]
+import argparse
+import logging
+import sys
+
+# [COMENTADO TEMPORALMENTE: INTEGRACION TRACKINGTIME]
 # Para volver a integrar TrackingTime, descomentar la siguiente linea:
 # from trackingtime.exporter import run_trackingtime_export
+from azure_devops.compare_modes import run_compare, format_compare_report
 from azure_devops.exporter import run_azure_devops_export
+from azure_devops.wiql import VALID_EXPORT_MODES
 from config import validate_config, Config
-from report_paths import ensure_period_dirs, get_report_paths
+from report_paths import ensure_period_dirs
 
 from processing import (
     load_data,
@@ -21,18 +27,59 @@ def setup_logging():
         format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
     )
 
-def main():
+
+def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description="Extrae datos de Azure DevOps (y TrackingTime) y genera el informe Excel."
+    )
+    parser.add_argument(
+        "--ado-export-mode",
+        choices=list(VALID_EXPORT_MODES),
+        default=None,
+        help=(
+            "Modo de exportacion de Azure DevOps. "
+            "wiql_env (default) usa TT_DATE_FROM/TT_DATE_TO; "
+            "saved_query usa las fechas embebidas en el query de Azure. "
+            "Si se omite, se usa ADO_EXPORT_MODE del .env (default: wiql_env)."
+        ),
+    )
+    parser.add_argument(
+        "--compare-modes",
+        action="store_true",
+        help=(
+            "Ejecuta saved_query y wiql_env contra el mismo query, compara los conjuntos "
+            "de work item IDs y termina sin generar el Excel."
+        ),
+    )
+    return parser.parse_args(argv)
+
+def main(argv: list[str] | None = None):
+    args = parse_args(argv)
     setup_logging()
     logger = logging.getLogger(__name__)
-    
-    logger.info("INICIO FASE 1: Extraccion de datos")
     
     try:
         # Asegura que las configuraciones esten presentes
         validate_config()
     except Exception as e:
         logger.error(f"Error de configuracion: {e}")
-        return
+        return 1
+
+    if args.compare_modes:
+        logger.info("Comparando modos de exportacion Azure DevOps (saved_query vs wiql_env)...")
+        try:
+            result = run_compare()
+        except Exception as e:
+            logger.error(f"Error al comparar modos Azure DevOps: {e}", exc_info=True)
+            return 1
+        print(format_compare_report(result))
+        if result["equal"]:
+            logger.info("Los conjuntos de work item IDs coinciden.")
+            return 0
+        logger.error("Los conjuntos de work item IDs NO coinciden.")
+        return 1
+
+    logger.info("INICIO FASE 1: Extraccion de datos")
 
     # [COMENTADO TEMPORALMENTE: INTEGRACION TRACKINGTIME]
     # Para volver a integrar TrackingTime, descomentar el siguiente bloque:
@@ -44,7 +91,7 @@ def main():
         
     logger.info("--- Ejecutando extraccion de Azure DevOps ---")
     try:
-        run_azure_devops_export()
+        run_azure_devops_export(mode=args.ado_export_mode)
     except Exception as e:
         logger.error(f"Error critico en modulo Azure DevOps: {e}", exc_info=True)
         
@@ -60,7 +107,7 @@ def main():
         df_azure_raw, df_tracking_raw, df_codigos, df_equipo = load_data(docs_dir)
     except Exception as e:
         logger.error(f"Error al cargar datos para Fase 2: {e}", exc_info=True)
-        return
+        return 1
         
     # 2. Transformations
     df_azure_clean = transform_azure_devops(df_azure_raw)
@@ -92,6 +139,7 @@ def main():
     )
     
     logger.info(f"FIN FASE 2. Archivo procesado en: {output_path}")
+    return 0
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main() or 0)
